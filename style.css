@@ -1,0 +1,140 @@
+header {
+    background-color: rgba(0, 0, 0, 0.822);
+    height: 120px;
+}
+
+body {
+    margin: 0px;
+    background-color: rgba(218, 216, 216, 0.877);
+    font-family:'Courier New', Courier, monospace;
+}
+
+nav {
+    display: flex;
+    justify-content: start;
+    margin: 20px;
+}
+
+.botoes-nav {
+    color: black;
+    font-size: 25px;
+    margin-right: 12px;
+    text-decoration: none;
+}
+
+.botoes-nav:hover {
+    text-decoration: underline;
+}
+
+.botao-adicionar {
+    text-decoration: none;
+    color:  #E0E0E2;
+    font-size: 50px;
+    margin: 10px 15px;
+}
+
+img {
+    width: 125px;
+    height: 166px;
+    object-fit: cover;
+}
+
+.campo-protagonistas {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    background-color: rgba(0, 0, 0, 0.644);
+    border-radius: 10px;
+    padding-left: 20px;
+    width: 400px;
+    height: 500px;
+    margin: 50px 130px;
+    justify-content: space-evenly;
+}
+
+.campo-cadastrar {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: end;
+    background-color: rgba(0, 0, 0, 0.644);
+    border-radius: 10px;
+    width: 400px;
+    height: 500px;
+    margin: 50px 130px;
+    padding: 4px;
+}
+
+p {
+    margin-bottom: 2px;
+    margin-top: 2px;
+    font-size: 22px;
+    color: white;
+}
+
+#lista {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.cadastro-protagonista {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.644);
+    border-radius: 10px;
+    width: 400px;
+    height: 500px;
+    margin: 50px auto 130px; 
+}
+
+h3 {
+    font-size: 30px;
+    text-align: center;
+    color: #E0E0E2;
+}
+
+.botao-enviar {
+    margin-bottom: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    width: 308px;
+    height: 43px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+input {
+    margin-bottom: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    width: 300px;
+    height: 37px;
+    font-size: 25px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+    font-size: 55px;
+    color: #E0E0E2;
+    margin: 0px;
+    padding: 10px;
+}
+
+.botao-excluir {
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+    font-family: 'Courier New', Courier, monospace;
+    position: relative;
+    left: 295px;
+    background-color: rgb(80, 15, 15);
+    border-radius: 10px;
+}
+
+.botao-excluir:hover {
+    background-color: rgb(117, 24, 24);
+}

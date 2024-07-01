@@ -36,6 +36,7 @@ if(pessoasLocalStorage){
             <p>Ator/Atriz: ${pessoas[i][3]}</p>
             <p>Descrição: ${pessoas[i][4]}</p>
             <p>Habilidades: ${pessoas[i][5]}</p>
+            <button class="botao-excluir" onclick="excluirLista${i}()">Excluir</button>
         </div>`
     }
 }
@@ -44,3 +45,5 @@ main.innerHTML +=
 `<div class="campo-cadastrar">
             <a class="botao-adicionar" href="cadastro-protagonista.html">+</a>
         </div>`
+        
+//duvidas: exluir lista e underline na pagina que esta mostrando

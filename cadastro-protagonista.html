@@ -7,12 +7,14 @@
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="cadastro-protagonista.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <nav><a class="botoes-nav" href="">Filmes</a> <a class="botoes-nav" href="protagonista.html">Protagonistas</a></nav>
+        <h1>NETFLIXO</h1>
     </header>
-    <main>
+    <nav><a class="botoes-nav" href="">Filmes</a> <a class="botoes-nav" href="protagonista.html">Protagonistas</a></nav>
+    <main class="cadastro-protagonista">
         <h3>Cadastro de Protagonista</h3>
         <form onsubmit="enviarForm(event)">
             <input type="text" name="url" placeholder="URL da foto" required>
@@ -21,7 +23,7 @@
             <input type="text" name="ator" placeholder="Ator/Atriz" required>
             <input type="text" name="descricao" placeholder="Descrição" required>
             <input type="text" name="habilidades" placeholder="Habilidades" required>
-            <button type="submit">Enviar</button>
+            <button class="botao-enviar" type="submit">Enviar</button>
         </form>
     </main>
 </body>
