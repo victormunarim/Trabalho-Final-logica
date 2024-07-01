@@ -1,2 +1,2 @@
 # Trabalho-Final-logica
-Site para listar filmes
+Site para listar filmes e protagonistas
