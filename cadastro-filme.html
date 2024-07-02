@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro filme</title>
+    <script src="scriptFilmes.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>NETFLIXO</h1>
+    </header>
+    <nav><a class="botoes-nav" href="filme.html">Filmes</a> <a class="botoes-nav" href="protagonista.html">Protagonistas</a></nav>
+    <main class="cadastro-filme">
+        <h3>Cadastro de Filme</h3>
+        <form id="filminho" onsubmit="enviarFormFilme(event)">
+            <input type="text" name="url" placeholder="URL foto da capa" required>
+            <input type="text" name="nomeFilme" placeholder="Título" required>
+            <input type="text" name="anoLançamento" placeholder="Ano de lançamento" required>
+            <input type="text" name="genero" placeholder="Gênero" required>
+            <input type="text" name="duracao" placeholder="Duração" required>
+            <input type="text" name="descricao" placeholder="Sinopse" required>
+            <button class="botao-enviar" type="submit">Enviar</button>
+        </form>
+    </main>
+</body>
+</html>
