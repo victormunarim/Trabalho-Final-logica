@@ -1,6 +1,6 @@
 header {
     background-color: rgba(0, 0, 0, 0.822);
-    height: 120px;
+    height: 100px;
 }
 
 body {
@@ -39,7 +39,7 @@ img {
     object-fit: cover;
 }
 
-.campo-protagonistas {
+.campo-protagonistas, .campo-filmes {
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -48,7 +48,7 @@ img {
     padding-left: 20px;
     width: 400px;
     height: 500px;
-    margin: 50px 130px;
+    margin: 50px 100px;
     justify-content: space-evenly;
 }
 
@@ -70,9 +70,11 @@ p {
     margin-top: 2px;
     font-size: 22px;
     color: white;
+    width: 385px;
+    overflow-wrap: break-word;
 }
 
-#lista {
+#lista, #listaFilme {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -86,7 +88,18 @@ p {
     border-radius: 10px;
     width: 400px;
     height: 500px;
-    margin: 50px auto 130px; 
+    margin: 50px auto 130px;
+}
+
+.cadastro-filme {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.644);
+    border-radius: 10px;
+    width: 400px;
+    height: 500px;
+    margin: 50px auto 130px;
 }
 
 h3 {
@@ -137,4 +150,8 @@ h1 {
 
 .botao-excluir:hover {
     background-color: rgb(117, 24, 24);
+}
+
+.sublinhado {
+    text-decoration: underline;
 }

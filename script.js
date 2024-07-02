@@ -23,11 +23,10 @@ function enviarForm(evento){
 }
 
 let main = document.querySelector('#lista')
-const pessoasLocalStorage = localStorage.getItem('pessoas')
+let pessoasLocalStorage = localStorage.getItem('pessoas')
 if(pessoasLocalStorage){
     pessoas = JSON.parse(pessoasLocalStorage)
     for(let i=0;i<pessoas.length;i++){
-        
         main.innerHTML += 
         `<div class="campo-protagonistas">
             <img src="${pessoas[i][0]}" alt="Foto do ${pessoas[i][3]}">
@@ -36,7 +35,7 @@ if(pessoasLocalStorage){
             <p>Ator/Atriz: ${pessoas[i][3]}</p>
             <p>Descrição: ${pessoas[i][4]}</p>
             <p>Habilidades: ${pessoas[i][5]}</p>
-            <button class="botao-excluir" onclick="excluirLista${i}()">Excluir</button>
+            <button class="botao-excluir" onclick="excluirLista(${i})">Excluir</button>
         </div>`
     }
 }
@@ -44,6 +43,24 @@ if(pessoasLocalStorage){
 main.innerHTML +=
 `<div class="campo-cadastrar">
             <a class="botao-adicionar" href="cadastro-protagonista.html">+</a>
+</div>`
+
+function excluirLista(indice){
+    pessoas.splice(indice,1)
+    localStorage.setItem('pessoas',JSON.stringify(pessoas))
+    pessoasLocalStorage.innerHTML = ''
+    for(let i=0;i<pessoas.length;i++){
+        main.innerHTML += 
+        `<div class="campo-protagonistas">
+            <img src="${pessoas[i][0]}" alt="Foto do ${pessoas[i][3]}">
+            <p>Nome: ${pessoas[i][1]}</p>
+            <p>Filme: ${pessoas[i][2]}</p>
+            <p>Ator/Atriz: ${pessoas[i][3]}</p>
+            <p>Descrição: ${pessoas[i][4]}</p>
+            <p>Habilidades: ${pessoas[i][5]}</p>
+            <button class="botao-excluir" onclick="excluirLista(${i})">Excluir</button>
         </div>`
-        
-//duvidas: exluir lista e underline na pagina que esta mostrando
+    }
+}
+
+//duvidas: exluir lista
