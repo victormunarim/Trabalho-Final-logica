@@ -23,20 +23,24 @@ function enviarForm(evento){
 
 }
 
+let divTexto = (a,b) => {
+return `<div class="campo-protagonistas">
+<img src="${a[0]}" alt="Foto do ${a[3]}">
+<p>Nome: ${a[1]}</p>
+<p>Filme: ${a[2]}</p>
+<p>Ator/Atriz: ${a[3]}</p>
+<p>Descrição: ${a[4]}</p>
+<p>Habilidades: ${a[5]}</p>
+<button class="botao-excluir" onclick="excluirLista(${b})">Excluir</button>
+</div>`
+}
+
 let main = document.querySelector('#lista')
 if(pessoasLocalStorage){
     pessoas = JSON.parse(pessoasLocalStorage)
     for(let i=0;i<pessoas.length;i++){
         main.innerHTML += 
-        `<div class="campo-protagonistas">
-            <img src="${pessoas[i][0]}" alt="Foto do ${pessoas[i][3]}">
-            <p>Nome: ${pessoas[i][1]}</p>
-            <p>Filme: ${pessoas[i][2]}</p>
-            <p>Ator/Atriz: ${pessoas[i][3]}</p>
-            <p>Descrição: ${pessoas[i][4]}</p>
-            <p>Habilidades: ${pessoas[i][5]}</p>
-            <button class="botao-excluir" onclick="excluirLista(${i})">Excluir</button>
-        </div>`
+        divTexto(pessoas[i],i)
     }
 }
 
@@ -46,22 +50,12 @@ main.innerHTML +=
 </div>`
 
 function excluirLista(indice){
-    pessoas = JSON.parse(pessoasLocalStorage)
     pessoas.splice(indice,1)
     main.innerHTML = ''
     if(pessoas){
-        // alert(pessoasLocalStorage)
         for(let i=0;i<pessoas.length;i++){
             main.innerHTML += 
-            `<div class="campo-protagonistas">
-                <img src="${pessoas[i][0]}" alt="Foto do ${pessoas[i][3]}">
-                <p>Nome: ${pessoas[i][1]}</p>
-                <p>Filme: ${pessoas[i][2]}</p>
-                <p>Ator/Atriz: ${pessoas[i][3]}</p>
-                <p>Descrição: ${pessoas[i][4]}</p>
-                <p>Habilidades: ${pessoas[i][5]}</p>
-                <button class="botao-excluir" onclick="excluirLista(${i})">Excluir</button>
-            </div>`
+            divTexto(pessoas[i],i)
         }
     }
     localStorage.setItem('pessoas',JSON.stringify(pessoas))
@@ -70,5 +64,3 @@ function excluirLista(indice){
             <a class="botao-adicionar" href="cadastro-protagonista.html">+</a>
 </div>`
 }
-
-// alert(pessoasLocalStorage)
