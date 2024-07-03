@@ -1,3 +1,4 @@
+const filmesLocalStorage = localStorage.getItem('filmes')
 let filmes = []
 
 function enviarFormFilme(evento){
@@ -22,13 +23,12 @@ function enviarFormFilme(evento){
 }
 
 let main = document.querySelector('#listaFilme')
-const filmesLocalStorage = localStorage.getItem('filmes')
 if(filmesLocalStorage){
     
     filmes = JSON.parse(filmesLocalStorage)
     for(let i=0;i<filmes.length;i++){
         
-main.innerHTML +=
+    main.innerHTML +=
         `<div class="campo-filmes">
             <img src="${filmes[i][0]}" alt="Foto do ${filmes[i][3]}">
             <p>Título: ${filmes[i][1]}</p>
@@ -36,7 +36,7 @@ main.innerHTML +=
             <p>Gênero: ${filmes[i][3]}</p>
             <p>Duração: ${filmes[i][4]}</p>
             <p>Sinopse: ${filmes[i][5]}</p>
-            <button class="botao-excluir" onclick="excluirLista${i}()">Excluir</button>
+            <button class="botao-excluir" onclick="excluirLista(${i})">Excluir</button>
         </div>`
     }
 }
@@ -45,3 +45,27 @@ main.innerHTML +=
 `<div class="campo-cadastrar">
             <a class="botao-adicionar" href="cadastro-filme.html">+</a>
 </div>`
+
+function excluirLista(indice){
+    filmes.splice(indice,1)
+    main.innerHTML = ''
+    if(filmes){
+        for(let i=0;i<filmes.length;i++){
+            main.innerHTML += 
+            `<div class="campo-filmes">
+            <img src="${filmes[i][0]}" alt="Foto do ${filmes[i][3]}">
+            <p>Título: ${filmes[i][1]}</p>
+            <p>Ano de Lançamento: ${filmes[i][2]}</p>
+            <p>Gênero: ${filmes[i][3]}</p>
+            <p>Duração: ${filmes[i][4]}</p>
+            <p>Sinopse: ${filmes[i][5]}</p>
+            <button class="botao-excluir" onclick="excluirLista(${i})">Excluir</button>
+        </div>`
+        }
+    }
+    localStorage.setItem('filmes',JSON.stringify(filmes))
+    main.innerHTML +=
+`<div class="campo-cadastrar">
+            <a class="botao-adicionar" href="cadastro-filme.html">+</a>
+</div>`
+}
