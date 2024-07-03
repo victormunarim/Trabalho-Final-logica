@@ -45,11 +45,10 @@ img {
     align-items: start;
     background-color: rgba(0, 0, 0, 0.644);
     border-radius: 10px;
-    padding-left: 20px;
     width: 400px;
-    height: 500px;
     margin: 50px 120px;
     justify-content: space-evenly;
+    padding: 20px 0px 20px 20px;
 }
 
 .campo-cadastrar {
@@ -66,8 +65,7 @@ img {
 }
 
 p {
-    margin-bottom: 2px;
-    margin-top: 2px;
+    margin: 10px 0px;
     font-size: 22px;
     color: white;
     width: 385px;
