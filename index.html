@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Protagonista</title>
+    <script src="script.js" defer></script>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>NETFLIXO</h1>
+    </header>
+    <nav><a class="botoes-nav" href="filme.html">Filmes</a> <a class="botoes-nav" href="protagonista.html">Protagonistas</a></nav>
+    <main class="cadastro-protagonista">
+        <h3>Cadastro de Protagonista</h3>
+        <form onsubmit="enviarForm(event)">
+            <input type="text" name="url" placeholder="URL da foto" required>
+            <input type="text" name="nome" placeholder="Nome" required>
+            <input type="text" name="filme" placeholder="Filme" required>
+            <input type="text" name="ator" placeholder="Ator/Atriz" required>
+            <input type="text" name="descricao" placeholder="Descrição" required>
+            <input type="text" name="habilidades" placeholder="Habilidades" required>
+            <button class="botao-enviar" type="submit">Enviar</button>
+        </form>
+    </main>
+</body>
+</html>
