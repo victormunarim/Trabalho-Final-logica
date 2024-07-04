@@ -46,7 +46,7 @@ if(pessoasLocalStorage){
 
 main.innerHTML +=
 `<div class="campo-cadastrar">
-            <a class="botao-adicionar" href="cadastro-protagonista.html">+</a>
+            <a class="botao-adicionar" href="index.html">+</a>
 </div>`
 
 function excluirLista(indice){
@@ -61,6 +61,6 @@ function excluirLista(indice){
     localStorage.setItem('pessoas',JSON.stringify(pessoas))
     main.innerHTML +=
 `<div class="campo-cadastrar">
-            <a class="botao-adicionar" href="cadastro-protagonista.html">+</a>
+            <a class="botao-adicionar" href="index.html">+</a>
 </div>`
 }
